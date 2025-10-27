@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <title>Perfil Votante</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- Bootstrap & AdminLTE CSS -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6/dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/admin-lte@3.2/dist/css/adminlte.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <link href="style/perfilvotante.css" rel="stylesheet" type="text/css"/>
+        
+    </head>
+    <body class="hold-transition sidebar-mini layout-fixed">
+        <div class="wrapper">
+            <!-- Navbar -->
+            <nav class="main-header navbar navbar-expand navbar-dark navbar-primary">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a href="#" class="nav-link" data-widget="pushmenu" id="pushmenu-btn"><i class="fas fa-bars"></i></a>
+                </li>
+            </ul>
+            <span class="navbar-text ml-auto mr-3" style="color:#fff;">DATOS PERSONALES DEL ESTUDIANTE </span>
+        </nav>
+
+            <!-- Sidebar -->
+            <aside class="main-sidebar sidebar-dark-primary elevation-4">
+                <a href="#" class="brand-link text-center"><span class="brand-text">Bienvenidos Votantes</span></a>
+                <div class="sidebar">
+                    <nav class="mt-2">
+                        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview">
+                            <li class="nav-header">Perfil</li>
+                            <li class="nav-item"><a href="perfilvotante.html" class="nav-link"><i class="nav-icon fas fa-chart-pie"></i><p>Perfil Votante</p></a></li>
+                            <li class="nav-header">VOTACIÓN</li>
+                            <li class="nav-item"><a href="votar.html" class="nav-link"><i class="nav-icon fas fa-users"></i><p>Votar</p></a></li>
+                            <li class="nav-item"><a href="posicion.html" class="nav-link"><i class="nav-icon fas fa-list"></i><p>Transmision del Sufragio</p></a></li>
+                            <li class="nav-item"><a href="candidatos.html" class="nav-link"><i class="nav-icon fas fa-user-tie"></i><p>Candidatos</p></a></li>
+                            <li class="nav-item"><a href="capacitacion.html" class="nav-link"><i class="nav-icon fas fa-user-tie"></i><p>Capacitación</p></a></li>
+                            <li class="nav-item"><a href="reclamos.html" class="nav-link"><i class="nav-icon fas fa-user-tie"></i><p>Reclamos en Vivo</p></a></li>
+                            <li class="nav-item"><a href="asistentepersonal.html" class="nav-link"><i class="nav-icon fas fa-user-tie"></i><p>Asistente de Votación</p></a></li>
+                            <li class="nav-header">CERRAR SESION</li>
+                            <li class="nav-item"><a href="index.html" class="nav-link"><i class="nav-icon fas fa-sign-out-alt"></i><p>Cerrar Sesión</p></a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </aside>
+
+            <!-- Content Wrapper -->
+            <div class="content-wrapper">
+                <!-- Header -->
+                <section class="content-header">
+                    <div class="container-fluid">
+                        <p>Bienvenido Estudiante Universitario, Aquí podrás ver tus datos personales.</p>
+                    </div>
+                </section>
+                <!-- Main content -->
+                <section class="content">
+                    <div class="container-fluid">
+                        <form id="profileForm" method="post" action="#">
+                            <div class="row">
+                                <!-- Foto -->
+                                <div class="col-md-4 text-center">
+                                    <img src="imagen/imagen4.jpg" alt="Foto de Perfil" class="profile-img mb-3" id="profileImage">
+                                    <div class="form-group">
+                                        <label for="profileImageInput">Cambiar Foto</label>
+                                        <input type="file" class="form-control-file" id="inputImagen" disabled>
+                                    </div>
+                                </div>
+                                <!-- Datos Personales -->
+                                <div class="col-md-8">
+                                    <div class="card card-primary card-outline">
+                                        <div class="card-body">
+                                            <div class="row">
+                                                <div class="form-group col-md-6">
+                                                    <label for="firstName">Nombre</label>
+                                                    <input type="text" class="form-control" id="txtnombre" name="firstName" disabled>
+                                                </div>
+                                                <div class="form-group col-md-6">
+                                                    <label for="lastName">Apellido</label>
+                                                    <input type="text" class="form-control" id="txtapellido" name="lastName" disabled>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="form-group col-md-4">
+                                                    <label for="birthDate">Fecha de Nacimiento</label>
+                                                    <input type="date" class="form-control" id="txtfechanac" name="birthDate" disabled>
+                                                </div>
+                                                <div class="form-group col-md-4">
+                                                    <label for="univCode">Código Universitario</label>
+                                                    <input type="text" class="form-control" id="txtcoduni" name="univCode" disabled>
+                                                </div>
+                                                <div class="form-group col-md-4">
+                                                    <label for="faculty">Facultad</label>
+                                                    <input type="text" class="form-control" id="txtfacultad" name="faculty" disabled>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="form-group col-md-6">
+                                                    <label for="school">Escuela Acad. Profesional</label>
+                                                    <input type="text" class="form-control" id="txtescuela" name="school" disabled>
+                                                </div>
+                                                <div class="form-group col-md-6">
+                                                    <label for="address">Dirección</label>
+                                                    <input type="text" class="form-control" id="txtdireccion" name="address" disabled>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="form-group col-md-6">
+                                                    <label for="email">Correo Electrónico</label>
+                                                    <input type="email" class="form-control" id="txtcorreo" name="email" disabled>
+                                                </div>
+                                                <div class="form-group col-md-6">
+                                                    <label for="phone">Teléfono Celular</label>
+                                                    <input type="tel" class="form-control" id="txtcelular" name="phone" disabled>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="form-group col-md-6">
+                                                    <label for="dni">Número de DNI</label>
+                                                    <input type="text" class="form-control" id="txtdni" name="dni" disabled>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </section>
+            </div>
+
+            <!-- Footer -->
+            <footer class="main-footer text-center">
+                <strong>UNIVERCIDAD NACIONAL JOSE FAUSTINO SANCHEZ CARRION 2025</strong>
+            </footer>
+        </div>
+
+        <!-- Scripts -->
+        <script src="https://cdn.jsdelivr.net/npm/jquery@3.6/dist/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/admin-lte@3.2/dist/js/adminlte.min.js"></script>
+        <script>
+            $(document).ready(function () {
+                $('#editBtn').click(function () {
+                    $('#profileForm input').prop('disabled', false);
+                    $('#profileImageInput').prop('disabled', false);
+                    $('#editBtn').hide();
+                    $('#saveBtn').show();
+                });
+            });
+            
+        </script>
+
+
+        <script src="jsTools/perfil.js" type="text/javascript"></script>
+
+    </body>
+</html>

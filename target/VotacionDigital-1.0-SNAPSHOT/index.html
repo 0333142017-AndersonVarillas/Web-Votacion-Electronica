@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA‑Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device‑width, initial‑scale=1" />
+        <title>UNJFSC – Votaciones Generales</title>
+
+        <!-- Google Fonts -->
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet" />
+
+        <!-- Bootstrap & AdminLTE CSS -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6/dist/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/admin-lte@3.2/dist/css/adminlte.min.css" />
+
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+        <style>
+            /* Tipografía base */
+            body {
+                font-family: 'Montserrat', sans-serif;
+                -webkit-font-smoothing: antialiased;
+                -moz-osx-font-smoothing: grayscale;
+            }
+            :root {
+                --unjfsc-blue: #000e29;
+                --unjfsc-gradient: linear-gradient(to bottom, #ffffff 0%, #000e29 40%);
+            }
+            /* LOGIN PAGE: fondo */
+            #login-page {
+                position: relative;
+                display: flex;
+                height: 100vh;
+                align-items: center;
+                justify-content: center;
+                background: url('imagen/imagen2.png') center center no-repeat;
+                background-size: cover;
+            }
+            #login-page::before {
+                content: "";
+                position: absolute;
+                inset: 0;
+                background: rgba(255,255,255,0.1);
+                z-index: 0;
+            }
+            .login-box {
+                position: relative;
+                z-index: 1;
+                max-width: 360px;
+                width: 100%;
+            }
+            .login-card-body {
+                background: var(--unjfsc-gradient);
+                border-radius: 0.5rem;
+                box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+                padding: 2rem;
+                color: #fff;
+            }
+            /* Por defecto los .login-box-msg van en azul */
+            .login-card-body .login-box-msg {
+                font-size: 1.1rem;
+                margin: 0;
+                letter-spacing: 0.5px;
+                color: var(--unjfsc-blue) !important;
+                font-weight: 700;
+            }
+            /* Excepción: si además llevan .text-white, pasan a blanco */
+            .login-card-body .login-box-msg.text-white {
+                color: #ffffff !important;
+            }
+            .login-card-body label {
+                font-weight: 600;
+                font-size: 0.95rem;
+            }
+            input.form-control {
+                border-radius: 0.25rem;
+                padding: 0.75rem;
+                font-size: 0.95rem;
+            }
+            input::placeholder {
+                color: rgba(0,0,0,0.4);
+                font-style: italic;
+            }
+            .input-group-text {
+                background: #fff;
+                border-left: none;
+                border-radius: 0 0.25rem 0.25rem 0;
+            }
+            .btn-primary {
+                background-color: var(--unjfsc-blue) !important;
+                border-color: var(--unjfsc-blue) !important;
+                font-weight: 600;
+                text-transform: uppercase;
+                letter-spacing: 1px;
+                padding: 0.75rem;
+            }
+            .login-help {
+                font-size: 0.85rem;
+                margin-top: 0.5rem;
+                margin-bottom: 1.5rem;
+                text-align: center;
+                color: #f0f0f0;
+            }
+        </style>
+        
+        <style>
+            .btn-white-border {
+                border: 2px solid white !important;
+            }
+        </style>
+
+    </head>
+    <body>
+
+        <!-- ======= LOGIN PAGE ======= -->
+        <div id="login-page">
+            <div class="login-box">
+                <div class="card">
+                    <div class="card-body login-card-body">
+                        <p class="login-box-msg">Votaciones Generales Universitarias</p>
+                        <p class="login-box-msg text-white">Inicia tu sesión</p>
+                        <div>
+                            <div class="form-group">
+                                <label for="usuario">Código Universitario</label>
+                                <div class="input-group mb-3">
+                                    <input type="text" id="coduniversitario" class="form-control" placeholder="" required />
+                                    <div class="input-group-append">
+                                        <div class="input-group-text"><span class="fas fa-user"></span></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="contrasena">Contraseña</label>
+                                <div class="input-group mb-3">
+                                    <input type="password" id="passuniversitario" class="form-control" placeholder="" required />
+                                    <div class="input-group-append">
+                                        <div class="input-group-text"><span class="fas fa-lock"></span></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Mensaje de ayuda bajo contraseña -->
+                            <p class="login-help">
+                                Utilice su Codigo Universitario y la Contraseña desde su intranet Institucional
+                            </p>
+
+                            <div class="row">
+                                <div class="col-12">
+                                    <button id="btnlogin" class="btn btn-primary btn-block btn-white-border">Entrar</button>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ======= DASHBOARD ======= -->
+        <div id="dashboard" class="wrapper" style="display:none;">
+            <nav class="main-header navbar navbar-expand navbar-white navbar-light">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" onclick="logout()"><i class="fas fa-sign-out-alt"></i> Cerrar sesión</a>
+                    </li>
+                </ul>
+            </nav>
+            <!-- Aquí iría el resto de tu dashboard -->
+        </div>
+
+        <!-- Scripts -->
+        <script src="https://cdn.jsdelivr.net/npm/jquery@3.6/dist/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6/dist/js/bootstrap.bundle.min.js"></script>
+        <script>
+                            function showDashboard() {
+                                document.getElementById("login-page").style.display = "none";
+                                document.getElementById("dashboard").style.display = "block";
+                            }
+                            function logout() {
+                                document.getElementById("dashboard").style.display = "none";
+                                document.getElementById("login-page").style.display = "flex";
+                            }
+        </script>
+        
+        <script src="jsTools/login.js" type="text/javascript"></script>
+        
+    </body>
+</html>

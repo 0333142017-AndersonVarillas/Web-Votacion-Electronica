@@ -1,0 +1,326 @@
+/* styles.css */
+
+/* Estilos generales */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+a.button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #ff5722;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+a.button:hover {
+    background-color: #e64a19;
+}
+
+header {
+    background-color: black;
+    color: #fff;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+}
+
+.brand img {
+    width: 50px; /* Ajusta el tamaño del logo según tus necesidades */
+    margin-right: 10px;
+}
+
+.brand h1 {
+    margin: 0;
+    font-size: 24px;
+    color:white;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li {
+    font-size: 16px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #ffc107; /* Cambia el color al pasar el mouse sobre los enlaces */
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    bottom: 0;
+    width: 100%;
+}
+main {
+    max-width: 1200px;
+    margin: 20px auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+/* Estilo general para los elementos del menú */
+#menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center; /* Centra verticalmente los elementos del menú */
+}
+
+/* Estilo para el botón de Cerrar Sesión */
+.boton-cerrar-sesion {
+    background: none;
+    border: none;
+    color: #fff; /* Cambia el color del texto según tu diseño */
+    cursor: pointer;
+    font-size: 16px; /* Ajusta el tamaño del texto según tu diseño */
+}
+
+/* Contenedor principal */
+.main-container {
+    max-width: 800px;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos para el cuadro de búsqueda */
+.search-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.busqueda {
+    width: 60%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+select {
+    width: 25%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-left: 5px;
+}
+
+button {
+    background-color: #ff5722;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #e64a19;
+}
+
+/* Estilos para el cuadro de ordenar por */
+.sort-container {
+    margin-top: 20px;
+    display: flex;
+    justify-content: flex-end; /* Alinea el contenido al final del contenedor */
+}
+
+select#ordenarPor {
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+/* Estilos para productos */
+/* Estilos generales */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+#catalogo-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    max-width: 800px;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos para cada producto */
+div.producto {
+    width: 200px; /* Ancho del cuadro de producto */
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center; /* Alinea el contenido al centro */
+}
+
+div.producto img {
+    max-width: 100%; /* Ajusta el tamaño máximo de la imagen al 100% del contenedor */
+    height: auto; /* Mantiene la proporción de aspecto original de la imagen */
+    margin-bottom: 10px; /* Espaciado inferior entre la imagen y el contenido del producto */
+}
+
+div.producto h2 {
+    color: #333;
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+div.producto p {
+    font-size: 14px;
+    color: #777;
+    margin-bottom: 10px;
+}
+
+div.producto small {
+    display: block;
+    font-size: 12px;
+    color: #999;
+}
+
+div.producto hr {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: 0;
+    border-top: 1px solid #ddd;
+}
+
+/* Estilos para productos llamativos */
+div.producto.llamativo {
+    background-color: #e0f7fa; /* Color en RGB */
+    border-color: #00bfff;
+}
+
+div.producto.llamativo h2 {
+    color: #007bff;
+}
+button:active {
+    background-color: #367638; /* Cambia el color de fondo cuando se presiona el botón */
+}
+
+/* Otros estilos del botón */
+.button-container {
+    text-align: center; /* Alinea el botón al centro si es necesario */
+    margin-top: 20px; /* Espaciado superior */
+}
+
+/*Login*/
+.login-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: center;
+    margin: 50px auto;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Añadido para centrar los elementos */
+}
+
+.login-label {
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.login-input {
+    width: 100%; /* Añadido para asegurar que ocupe todo el ancho disponible */
+    padding: 10px;
+    margin-bottom: 16px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box; /* Añadido para incluir el padding en el ancho total */
+}
+
+.login-button {
+    width: 100%; /* Añadido para asegurar que ocupe todo el ancho disponible */
+    padding: 12px;
+    background-color: #ff5722;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.login-button:hover {
+    background-color: #e64a19;
+}
+
+/*carrito*/
+#carrito {
+    width: 100%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#carrito th, #carrito td {
+    padding-left: 20px;
+    padding-top: 4px;
+    text-align: left;
+}
+
+#carrito th {
+    font-weight: bold;
+}
+.eliminar {
+    cursor: pointer;
+    color: #e74c3c;
+    text-decoration: none;
+}
+
+.eliminar:hover {
+    text-decoration: underline;
+}
+#comprar-btn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #ff5722;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}

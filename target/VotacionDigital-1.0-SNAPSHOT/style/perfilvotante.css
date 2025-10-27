@@ -1,0 +1,34 @@
+/* 
+    Created on : 9 ago. 2025, 01:51:53
+    Author     : Jason Anderson
+*/
+
+/* Navbar principal */
+.navbar-primary {
+    background-color: #212529 !important;
+}
+
+/* Sidebar */
+.sidebar-dark-primary {
+    background-color: #1e012d !important;
+}
+
+/* Foto de perfil */
+.profile-img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid #6c757d;
+}
+
+/* Footer principal */
+.main-footer {
+    background-color: #0a2e5d !important;  /* ajusta este hex al color que quieras */
+    color: #ffffff !important;             /* color del texto */
+    padding: 1rem;                         /* opcional: espaciado interno */
+}
+
+.main-footer a {
+    color: #f4a261; /* color de los enlaces en el footer */
+}

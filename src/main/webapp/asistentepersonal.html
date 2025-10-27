@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8" />
+        <title>Asistente de Votación Conversación (voz)</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <!-- CSS externos -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6/dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/admin-lte@3.2/dist/css/adminlte.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <link href="style/asistentepersonal.css" rel="stylesheet" type="text/css"/>
+    </head>
+    
+    <body class="hold-transition sidebar-mini layout-fixed">
+
+        <!-- Navbar -->
+        <nav class="main-header navbar navbar-expand navbar-dark navbar-primary">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a href="#" class="nav-link" data-widget="pushmenu" id="pushmenu-btn"><i class="fas fa-bars"></i></a>
+                </li>
+            </ul>
+            <span class="navbar-text ml-auto mr-3" style="color:#fff;">ASISTENTE DE VOTACION CON IA </span>
+        </nav>
+
+        <!-- Sidebar (fijo) -->
+        <aside class="main-sidebar sidebar-dark-primary elevation-4">
+            <a href="#" class="brand-link text-center"><span class="brand-text">Bienvenidos Votantes</span></a>
+            <div class="sidebar">
+                <nav class="mt-2">
+                    <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview">
+                        <li class="nav-header">Perfil</li>
+                        <li class="nav-item"><a href="perfilvotante.html" class="nav-link"><i class="nav-icon fas fa-chart-pie"></i><p>Perfil Votante</p></a></li>
+                        <li class="nav-header">VOTACIÓN</li>
+                        <li class="nav-item"><a href="votar.html" class="nav-link"><i class="nav-icon fas fa-users"></i><p>Votar</p></a></li>
+                        <li class="nav-item"><a href="posicion.html" class="nav-link"><i class="nav-icon fas fa-list"></i><p>Transmisión del Sufragio</p></a></li>
+                        <li class="nav-item"><a href="candidatos.html" class="nav-link"><i class="nav-icon fas fa-user-tie"></i><p>Candidatos</p></a></li>
+                        <li class="nav-item"><a href="capacitacion.html" class="nav-link"><i class="nav-icon fas fa-user-tie"></i><p>Capacitación</p></a></li>
+                        <li class="nav-item"><a href="reclamos.html" class="nav-link"><i class="nav-icon fas fa-user-tie"></i><p>Reclamos en Vivo</p></a></li>
+                        <li class="nav-item"><a href="asistentepersonal.html" class="nav-link"><i class="nav-icon fas fa-robot"></i><p>Asistente de Votación</p></a></li>
+                        <li class="nav-header">CERRAR SESIÓN</li>
+                        <li class="nav-item"><a href="index.html" class="nav-link"><i class="nav-icon fas fa-sign-out-alt"></i><p>Cerrar Sesión</p></a></li>
+                    </ul>
+                </nav>
+            </div>
+        </aside>
+
+        <!-- Contenido principal -->
+        <div class="content-with-sidebar">
+            <div class="meet-layout">
+                <!-- Izquierda: panel estilo Meet -->
+                <div class="video-panel">
+
+                    <div class="assistant-info">
+                        <div class="assistant-avatar">
+                            <img src="imagen/IA.jpg" alt="Asistente IA">
+                        </div>
+                        <div>
+                            <div class="assistant-name">Asistente Virtual IA</div>
+                            <div class="assistant-sub">Experta en votaciones Responde por voz y texto</div>
+                            <span id="voice-status" aria-live="polite"></span>
+                        </div>
+                    </div>
+
+                    <div id="transcript" aria-live="polite">
+                        <strong class="transcript-label">Transcripción:</strong>
+                        <div id="transcript-text" style="margin-top:8px; white-space:pre-wrap; color:#e9f6ff"></div>
+                    </div>
+
+                    <div class="controls">
+                        <div id="big-mic" class="big-mic" title="Presiona para hablar"><i class="fas fa-microphone"></i></div>
+                        <button id="btn-stop-speech" class="small-btn">Detener audio</button>
+                        <button id="btn-clear-history" class="small-btn">Limpiar chat</button>
+                        <div style="margin-left:auto; color:#cce8ff; font-size:0.95rem; display:flex; align-items:center; gap:8px;">
+                            <i class="fas fa-circle" style="color:#28a745; font-size:0.7rem"></i> Conectado
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Derecha: Chat panel -->
+                <div class="chat-panel">
+                    <h5 style="margin:0 0 10px 0;">Mensajes de Chat</h5>
+
+                    <div id="chat-box" role="log" aria-live="polite"></div>
+
+                    <form id="chat-form" class="mt-3" autocomplete="off">
+                        <div class="input-group">
+                            <input type="text" id="user-input" class="form-control" placeholder="Escribe tu consulta o presiona el micrófono para hablar...">
+                            <div class="input-group-append">
+                                <button type="submit" class="btn btn-primary">Enviar</button>
+                            </div>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+
+            <footer class="main-footer text-center mt-3">
+                <strong>UNIVERSIDAD NACIONAL JOSÉ FAUSTINO SÁNCHEZ CARRIÓN 2025</strong>
+            </footer>
+        </div>
+
+        <!-- Librerías JS necesarias -->
+        <script src="https://cdn.jsdelivr.net/npm/jquery@3.6/dist/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/admin-lte@3.2/dist/js/adminlte.min.js"></script>
+
+        <!-- Script externo del asistente -->
+        <script src="jsTools/asistentepersonal.js" type="text/javascript"></script>
+
+        <!-- Toggle sidebar small script -->
+        <script>
+            (function () {
+                const pushBtn = document.getElementById('pushmenu-btn');
+                if (!pushBtn)
+                    return;
+                pushBtn.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const sidebar = document.querySelector('.main-sidebar');
+                    const content = document.querySelector('.content-with-sidebar');
+                    if (!sidebar || !content)
+                        return;
+                    if (sidebar.style.width && sidebar.style.width !== '0px') {
+                        sidebar.style.width = '0';
+                        sidebar.style.overflow = 'hidden';
+                        content.style.marginLeft = '0';
+                    } else {
+                        sidebar.style.width = '250px';
+                        sidebar.style.overflow = 'auto';
+                        content.style.marginLeft = '250px';
+                    }
+                });
+            })();
+        </script>
+    </body>
+</html>

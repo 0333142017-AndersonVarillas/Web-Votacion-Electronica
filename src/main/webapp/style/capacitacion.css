@@ -1,0 +1,29 @@
+/* 
+    Created on : 9 ago. 2025, 01:35:09
+    Author     : Jason Anderson
+*/
+
+.navbar-primary {
+    background-color: #212529 !important;
+}
+
+.sidebar-dark-primary {
+    background-color: #1e012d !important;
+}
+
+.main-footer {
+    background-color: #0a2e5d !important;
+    color: #ffffff !important;
+    padding: 1rem;
+}
+
+.main-footer a {
+    color: #f4a261;
+}
+
+.video-card iframe {
+    width: 100%;
+    height: 250px;
+}
+
+

@@ -1,0 +1,110 @@
+/* 
+    Created on : 9 ago. 2025, 01:36:30
+    Author     : Jason Anderson
+*/
+
+/* Tipografía base */
+body {
+    font-family: 'Montserrat', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+:root {
+    --unjfsc-blue: #000e29;
+    --unjfsc-gradient: linear-gradient(to bottom, #ffffff 0%, #000e29 40%);
+}
+
+/* LOGIN PAGE: fondo */
+#login-page {
+    position: relative;
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    background: url('imagen/imagen2') center center no-repeat;
+    background-size: cover;
+}
+
+#login-page::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(255, 255, 255, 0.1);
+    z-index: 0;
+}
+
+.login-box {
+    position: relative;
+    z-index: 1;
+    max-width: 360px;
+    width: 100%;
+}
+
+.login-card-body {
+    background: var(--unjfsc-gradient);
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    padding: 2rem;
+    color: #fff;
+}
+
+/* Por defecto los .login-box-msg van en azul */
+.login-card-body .login-box-msg {
+    font-size: 1.1rem;
+    margin: 0;
+    letter-spacing: 0.5px;
+    color: var(--unjfsc-blue) !important;
+    font-weight: 700;
+}
+
+/* Excepción: si además llevan .text-white, pasan a blanco */
+.login-card-body .login-box-msg.text-white {
+    color: #ffffff !important;
+}
+
+.login-card-body label {
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+
+input.form-control {
+    border-radius: 0.25rem;
+    padding: 0.75rem;
+    font-size: 0.95rem;
+}
+
+input::placeholder {
+    color: rgba(0, 0, 0, 0.4);
+    font-style: italic;
+}
+
+.input-group-text {
+    background: #fff;
+    border-left: none;
+    border-radius: 0 0.25rem 0.25rem 0;
+}
+
+.btn-primary {
+    background-color: var(--unjfsc-blue) !important;
+    border-color: var(--unjfsc-blue) !important;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 0.75rem;
+}
+
+.login-help {
+    font-size: 0.85rem;
+    margin-top: 0.5rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    color: #f0f0f0;
+}
+
+/* Botón con borde blanco */
+.btn-white-border {
+    border: 2px solid white !important;
+}
+
+

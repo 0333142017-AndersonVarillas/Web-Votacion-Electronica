@@ -1,0 +1,50 @@
+/* 
+    Created on : 9 ago. 2025, 01:42:18
+    Author     : Jason Anderson
+*/
+
+/* Navbar principal */
+.navbar-primary {
+    background-color: #212529 !important;
+}
+
+/* Sidebar */
+.sidebar-dark-primary {
+    background-color: #1e012d !important;
+}
+
+/* Small-box: metric cards */
+.small-box.bg-secondary {
+    background-color: #e9c46a !important;
+}
+
+.small-box.bg-success {
+    background-color: #2a9d8f !important;
+}
+
+.small-box.bg-warning {
+    background-color: #f4a261 !important;
+}
+
+.small-box.bg-danger {
+    background-color: #e76f51 !important;
+}
+
+/* Footer principal */
+.main-footer {
+    background-color: #0a2e5d !important;  /* ajusta este hex al color que quieras */
+    color: #ffffff !important;             /* color del texto */
+    padding: 1rem;                         /* opcional: espaciado interno */
+}
+
+.main-footer a {
+    color: #f4a261; /* enlaces del footer */
+}
+
+/* Limita altura de la portada sin recortar */
+.content-wrapper .img-fluid {
+    max-height: 2500px;
+    object-fit: contain;
+}
+
+

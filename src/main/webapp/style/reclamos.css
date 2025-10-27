@@ -1,0 +1,96 @@
+/* 
+    Created on : 9 ago. 2025, 01:48:05
+    Author     : Jason Anderson
+*/
+
+
+.navbar-primary {
+    background-color: #212529 !important;
+}
+
+.sidebar-dark-primary {
+    background-color: #1e012d !important;
+}
+
+.main-footer {
+    background-color: #0a2e5d !important;
+    color: #ffffff !important;
+    padding: 1rem;
+}
+
+.main-footer a {
+    color: #f4a261;
+}
+
+.chat-box {
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    height: 400px;
+    overflow-y: auto;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+/* Estilo de burbuja tipo WhatsApp */
+.chat-message {
+    position: relative;
+    display: inline-block;
+    max-width: 70%;
+    padding: 8px 12px;
+    margin-bottom: 10px;
+    border-radius: 16px;
+    word-wrap: break-word;
+}
+
+.chat-message.user {
+    background-color: #dcf8c6;
+    align-self: flex-end;
+    margin-left: auto;
+}
+
+.chat-message.user::after {
+    content: '';
+    position: absolute;
+    right: -8px;
+    bottom: 0;
+    width: 0;
+    height: 0;
+    border-top: 8px solid #dcf8c6;
+    border-left: 8px solid transparent;
+}
+
+.chat-message.admin {
+    background-color: #fff;
+    border: 1px solid #e5e5e5;
+    align-self: flex-start;
+    margin-right: auto;
+}
+
+.chat-message.admin::before {
+    content: '';
+    position: absolute;
+    left: -8px;
+    bottom: 0;
+    width: 0;
+    height: 0;
+    border-top: 8px solid #fff;
+    border-right: 8px solid transparent;
+}
+
+/* Nombre y código debajo de la burbuja */
+.chat-meta {
+    font-size: 0.75rem;
+    color: #999;
+    margin-top: 2px;
+}
+
+/* Menciones resaltadas */
+.mention {
+    background-color: rgba(30, 144, 255, 0.2);
+    color: #1e90ff;
+    padding: 2px 4px;
+    border-radius: 4px;
+}

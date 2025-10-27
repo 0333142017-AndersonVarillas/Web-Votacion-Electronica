@@ -1,0 +1,43 @@
+/* 
+    Created on : 9 ago. 2025, 01:49:30
+    Author     : Jason Anderson
+*/
+
+.navbar-primary {
+    background-color: #212529 !important;
+}
+
+.sidebar-dark-primary {
+    background-color: #1e012d !important;
+}
+
+.small-box.bg-secondary {
+    background-color: #e9c46a !important;
+}
+
+.small-box.bg-success {
+    background-color: #2a9d8f !important;
+}
+
+.small-box.bg-warning {
+    background-color: #f4a261 !important;
+}
+
+.small-box.bg-danger {
+    background-color: #e76f51 !important;
+}
+
+.main-footer {
+    background-color: #0a2e5d !important;
+    color: #ffffff !important;
+    padding: 1rem;
+}
+
+.main-footer a {
+    color: #f4a261;
+}
+
+.card-selected {
+    border: 2px solid #f4a261;
+    opacity: 0.8;
+}

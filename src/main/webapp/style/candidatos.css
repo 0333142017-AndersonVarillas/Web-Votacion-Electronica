@@ -1,0 +1,29 @@
+/* 
+    Created on : 9 ago. 2025, 01:33:07
+    Author     : Jason Anderson
+*/
+
+.navbar-primary {
+    background-color: #212529 !important;
+}
+
+.sidebar-dark-primary {
+    background-color: #1e012d !important;
+}
+
+.card img {
+    height: 250px;
+    object-fit: cover;
+}
+
+.main-footer {
+    background-color: #0a2e5d !important;  /* ajusta este hex al color que quieras */
+    color: #ffffff !important;             /* color del texto */
+    padding: 1rem;                         /* opcional: espaciado interno */
+}
+
+.main-footer a {
+    color: #f4a261;                        /* si tuvieras enlaces en el footer */
+}
+
+
